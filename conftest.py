@@ -10,3 +10,6 @@ def set_up():
     yield driver
     sleep(1.5)
     driver.quit()
+
+
+    test
