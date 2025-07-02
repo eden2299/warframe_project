@@ -2,15 +2,16 @@ from time import sleep
 
 import allure
 
-from pages.homepage import Homepage
-from pages.itempage import Itempage
+from pages.base import Base
+
 
 @allure.suite("item search")
 def test_test3(set_up):
     driver = set_up
+    basic = Base(driver)
 
-    Homepage(driver).get_homepage()
-    Homepage(driver).get_search_bar().send_keys("arcane energize")
-    Homepage(driver).get_search_button().click()
+    basic.get_homepage()
+    basic.get_search_bar().send_keys("arcane energize")
+    basic.get_search_button().click()
     sleep(0.5)
     assert "Arcane Energize" in driver.title
