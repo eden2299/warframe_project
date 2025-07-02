@@ -15,4 +15,6 @@ def test_test2(set_up):
     Homepage(driver).get_homepage()
     Homepage(driver).get_search_bar().send_keys("a")
     Homepage(driver).get_search_button().click()
-    sleep(0.5)
+    sleep(1)
+
+    assert "Abating Link" in driver.title
