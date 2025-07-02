@@ -1,7 +1,5 @@
 from time import sleep
-
 import allure
-
 from pages.homepage import Homepage
 from pages.itempage import Itempage
 
